@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul>
+        {% for event in events %}
+            <li class="event-container">
+                <div class="event-image">
+                    <img src="{{ url_for('uploaded_file', filename=event.image) }}" class="img-fluid" alt="{{ event.name }}">
+                </div>
+                <div class="event-details">
+                    <a href="{{ url_for('event_details', event_id=event.id) }}">{{ event.name }}</a>
+                    <div class="event-subtitle">{{ event.date }} | {{ event.hours }} hours | {{ event.address }}</p>
+                    <p>{{ event.description }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

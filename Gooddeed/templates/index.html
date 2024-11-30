@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <header class="hero">
+        <img src="/static/images/Volunteers_Working.png" alt="Banner Image" class="banner-image">
+        <div class="hero-content">
+            <h1>Find employment in your local community today!</h1>
+            <p>Join us in exploring the hundreds of job opportunities available today!</p>
+            <a href="{{ url_for('sign_up') }}" class="cta-button">Start Searching Today!</a>
+        </div>
+    </header>
+
+    <section>
+        <h2 id="big">About Us</h2>
+        <div class="about-box">
+            <p>At GoodDeed, we are committed to make job opportunities more available and accessible for everyone. </p>
+            <p>Founded with the goal of bridging the gap between volunteers and prospective hosts, GoodDeed simplifies the volunteer experience by matching volunteers with opportunities based on their interests and availability. For hosts, we offer tools to post opportunities and manage volunteers, reducing costs. </p>
+            <p>By creating a connected community of helpers and changemakers, our mission is to drive greater participation in volunteerism, increase the impact of service, and help nonprofits maximize their positive contributions to society.</p>
+            <p>Join us in building a volunteer experience where doing good deeds is easier than ever!</p>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Volunteer Testimonials</h2>
+        <div class="testimonial">
+            <p>"Volunteering with this organization has changed my life! I've met amazing people and made a real difference in the community." - Guha Ekambaram</p>
+        </div>
+        <div class="testimonial">
+            <p>"A rewarding experience! I love being part of a team that truly cares." - Edwin Liu </p>
+        </div>
+        <div class="testimonial">
+            <p>"Well-designed and easy to use! I enjoyed every section while using this website and see a great future in it!" - Aaron Gu</p>
+        </div>
+    </section>
+{% endblock %}

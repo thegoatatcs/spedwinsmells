@@ -1,0 +1,465 @@
+/* Base Styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+.header-container {
+    height: 120px;
+    display: flex;
+    background-color: #54a07e;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0 auto; 
+}
+
+/* Header Image Styling */
+.header-img {
+    margin: 20px auto;
+    width: 150px;
+    text-align: center;
+}
+
+.header-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.header-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    height: 200px; /* Set a fixed height */
+    width: 230px; /* Set a fixed width */
+    margin-left: 2em;
+}
+
+nav {
+    display: flex;
+    padding-right:2em;
+}
+
+nav a {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #004d40;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+#big {
+    font-size:3em;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 40px 20px; /* Padding for space around content */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+    border-radius: 8px; /* Rounded corners */
+    width: 90%; /* Ensures the content fits well */
+    max-width: 600px; /* Limits the width for larger screens */
+}
+
+.hero-content h1 {
+    font-size: 2.5em; /* Adjusted size for better fit */
+    margin: 0 0 10px; /* Add bottom margin for spacing */
+    line-height: 1.2; /* Line height for better spacing */
+}
+
+
+.banner-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the banner area */
+}
+
+.event-container {
+    display: flex; /* Use Flexbox for side-by-side layout */
+    align-items: flex-start; /* Align items to the start */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.event-details a{
+    font-size: 2em;
+}
+
+.event-image {
+    flex: 1; /* Allow the image to grow */
+    max-width: 150px; /* Set a maximum width for the image */
+    margin-right: 20px; /* Space between the image and details */
+}
+
+.event-image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.event-details {
+    flex: 2; /* Allow the details section to take more space */
+}
+
+.event-subtitle{
+    padding-top: 1em;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    text-align: center;
+}
+
+.banner-content h2 {
+    font-size: 2.5em; /* Adjust font size as needed */
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: 1.2em; /* Adjust font size as needed */
+}
+
+main {
+    flex: 1;  /* Allows main content to fill the remaining space */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 400px; /* Adjust the max height as needed */
+    width: auto;
+}
+
+
+.about, .testimonials {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center; /* Center text for better presentation */
+}
+
+.about h2, .testimonials h2 {
+    font-size: 2.5em; /* Larger headings */
+    margin-bottom: 20px; /* Space between heading and text */
+}
+
+.about-box {
+    background-color: #f9f9f9; /* White background */
+    border-radius: 10px; /* Rounded edges */
+    padding: 20px; /* Padding around the text */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 20px; /* Space above the box */
+}
+
+.about-box p {
+    text-align: left; /* Left align the text */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+.testimonial {
+    background: #f9f9f9; /* Light background for testimonials */
+    border-left: 5px solid #ff9800; /* Left border color */
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 5px; /* Rounded corners for testimonials */
+    text-align: left; /* Align text to the left */
+}
+
+.testimonial p {
+    font-size: 1.2em; /* Adjust font size for testimonials */
+    line-height: 1.5; /* Line height for better readability */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e68a00; /* Button hover color */
+}
+
+footer {
+    background-color: #54a07e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    font-size: 0.7em;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px; 
+    margin: 20px auto; 
+    width: 90%; 
+    box-sizing: border-box;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+h2, h3 {
+    color: #00796b;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+ul li a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .header-img {
+        width: 120px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        margin: 0 3px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .header-img {
+        width: 100px;
+    }
+
+    nav a {
+        padding: 5px 8px;
+        margin: 0 2px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+
+
+.event-container {
+    display: flex;
+    flex-direction: row; /* Keep image and details side by side */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff; /* Background color to separate it from the page */
+}
+
+.event-image {
+    flex: 0 0 200px; /* Fixed width for the image container */
+    max-width: 200px; /* Set a maximum width for the image */
+    margin-right: 20px; /* Space between the image and details */
+}
+
+.event-image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+    object-fit: cover; /* Ensure the image fills the container */
+}
+
+.event-details {
+    flex: 1; /* Allow the details section to take the remaining space */
+    padding-left: 20px; /* Space between image and details */
+}
+
+.event-subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.signup-container, .volunteers-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Match the background color with the event container */
+    margin-top: 20px; /* Space between event details and signup section */
+}
+
+.signup-container {
+    width: 90%; /* Make it take the full width */
+}
+
+.volunteers-container {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .event-container {
+        flex-direction: column; /* Stack the image and details vertically */
+        text-align: center; /* Center-align text for smaller screens */
+    }
+
+    .event-image {
+        margin-right: 0; /* Remove the margin since it's stacked vertically */
+        margin-bottom: 20px; /* Add spacing below the image */
+        width: 100%; /* Make the image take up full width */
+        max-width: none; /* Remove max width on smaller screens */
+    }
+
+    .event-details {
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .signup-container, .volunteers-container {
+        margin-left: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <header>
+        <div class="header-container">
+            <img src="/static/images/GOODDEEDLOGOPREM.png" alt="Logo" class="logo">
+            <nav>
+                <a href="{{ url_for('index') }}">HOME</a>
+                <a href="{{ url_for('eventlist') }}">JOBS</a>
+                {% if not session['logged_in'] %}
+                <a href="{{ url_for('sign_up') }}">SIGN-UP</a>
+                <a href="{{ url_for('login')}}">LOGIN</a>
+                {%endif%}
+                {% if session['role'] == 'Coordinator' %}
+                    <a href="{{ url_for('create_event') }}">CREATE POSTING</a>
+                    <a href="{{ url_for('update_hours') }}">UPLOAD HOURS</a>
+                    {% endif %}
+                {% if session['role'] == 'Volunteer' %}
+                    <a href="{{ url_for('hours') }}">TOTAL HOURS</a>
+                {% endif %}
+                {% if session['logged_in'] %}
+                    <a href="{{ url_for('logout') }}">LOGOUT</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>(512) 989-6808</p>
+        <p>TERMS OF SERVICE | PRIVACY POLICY | </p>
+        <p>© 2024-2024 Employer Searching Co. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

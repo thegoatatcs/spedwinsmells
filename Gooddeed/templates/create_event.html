@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Create Event</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="name">Job:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="image">Job Image:</label><br>
+        <input type="file" id="image" name="image"><br>
+        
+        <label for="date">Interview Date:</label><br>
+        <input type="date" id="date" name="date" required><br>
+        
+        <label for="date">Job Description:</label><br>
+        <input type="text" id="description" name="description" required><br>
+
+        <label for="name">Job Hours:</label><br>
+        <input type="number" id="hour" name="hour" required><br>
+
+        <label for="date">Job Location:</label><br>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="name">Job Salary:</label><br>
+        <input type="number" id="wage" name="wage" required><br><br>
+        
+        <label for="name">Location Zip:</label><br>
+        <input type="number" id="zip" name="zip" required><br><br>
+        
+        <button type="submit">Create Event</button>
+    </form>
+{% endblock %}

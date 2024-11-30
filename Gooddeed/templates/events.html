@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="event-container d-flex">
+            <div class="event-image">
+                {% if event.image %}
+                    <img src="{{ url_for('uploaded_file', filename=event.image) }}" class="img-fluid" alt="{{ event.name }}">
+                {% else %}
+                    <img src="default-image.jpg" class="img-fluid" alt="Default Event Image"> <!-- Placeholder if no image -->
+                {% endif %}
+            </div>
+            <div class="event-details">
+                <h2>{{ event.name }}</h2>
+                <p class="event-subtitle">{{ event.date }} | {{ event.hours }} hours | {{ event.address }} | {{event.wage}} </p>
+                <p>{{ event.description }}</p>
+            </div>
+        </div>
+
+        <div class="signup-container mt-4">
+            <h3>Sign Up for the Event</h3>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Join Event</button>
+            </form>
+        </div>
+
+        <div class="volunteers-container mt-4">
+            <h3>Students Signed Up:</h3>
+            <ul class="list-group">
+                {% for volunteer in event.volunteers %}
+                    <li class="list-group-item">{{ volunteer }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}  
